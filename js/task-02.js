@@ -14,12 +14,21 @@ const ingredients = [
   "Condiments",
 ];
 
+// const products = document.querySelector(`#ingredients`);
+
+// for (let i = 0; i < ingredients.length; i += 1) {
+//   const ingredient = document.createElement(`li`);
+//   ingredient.textContent = ingredients[i];
+//   ingredient.classList.add(`item`);
+//   products.append(ingredient);
+//   console.log(products);
+// }
+
 const products = document.querySelector(`#ingredients`);
 
 for (let i = 0; i < ingredients.length; i += 1) {
   const ingredient = document.createElement(`li`);
-  ingredient.textContent = ingredients[i];
+  ingredient.innerHTML = ingredients[i];
   ingredient.classList.add(`item`);
   products.append(ingredient);
-  console.log(products);
 }
