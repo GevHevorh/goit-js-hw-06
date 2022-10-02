@@ -14,21 +14,21 @@ const ingredients = [
   "Condiments",
 ];
 
-// const products = document.querySelector(`#ingredients`);
+const products = document.querySelector(`#ingredients`);
+
+const elements = [];
+
+const createNewElement = ingredients.map((ingredient) => {
+  const newEl = document.createElement(`li`);
+  newEl.textContent = ingredient;
+  newEl.classList.add(`item`);
+  elements.push(newEl);
+});
+products.append(...elements);
 
 // for (let i = 0; i < ingredients.length; i += 1) {
 //   const ingredient = document.createElement(`li`);
-//   ingredient.textContent = ingredients[i];
+//   ingredient.innerHTML = ingredients[i];
 //   ingredient.classList.add(`item`);
 //   products.append(ingredient);
-//   console.log(products);
 // }
-
-const products = document.querySelector(`#ingredients`);
-
-for (let i = 0; i < ingredients.length; i += 1) {
-  const ingredient = document.createElement(`li`);
-  ingredient.innerHTML = ingredients[i];
-  ingredient.classList.add(`item`);
-  products.append(ingredient);
-}
